@@ -60,7 +60,7 @@ function StartR_ExternalTerm(rcmd)
                         \ s:term_cmd, tmuxcnf, g:rplugin.tmuxsname, rcmd)
         elseif g:R_term == "termite"
             let opencmd = printf("%s 'tmux -L NvimR -2 %s new-session -s %s \"%s\"'",
-                        \ s:term_cmd, tmuxcnf, g:rplugin_tmuxsname, rcmd)
+                        \ s:term_cmd, tmuxcnf, g:rplugin.tmuxsname, rcmd)
         else
             let opencmd = printf("%s tmux -L NvimR -2 %s new-session -s %s \"%s\"",
                         \ s:term_cmd, tmuxcnf, g:rplugin.tmuxsname, rcmd)
